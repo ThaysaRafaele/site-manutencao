@@ -1,4 +1,4 @@
-/* Reset básico */
+
 * {
     margin: 0;
     padding: 0;
@@ -8,14 +8,14 @@
 /* Estilos globais */
 body {
     font-family: Arial, sans-serif;
-    background-color: #333; /* Cor de fundo cinza escuro */
-    color: #fff; /* Cor do texto branca */
+    background-color: #00adb5; 
+    color: #fff; 
     line-height: 1.6;
-    text-align: center; /* Centralizar texto */
+    text-align: center; 
 }
 
 header {
-    background-color: #222; /* Cor de fundo preta */
+    background-color: #222831; 
     color: #fff;
     padding: 20px 0;
 }
@@ -25,6 +25,10 @@ header .logo img {
     margin-bottom: 15px;
 }
 
+nav {
+    background-color: #222831 !important;
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -32,23 +36,29 @@ nav ul {
     margin-top: 10px;
 }
 
-nav ul li {
+.headerItem {
     margin: 0 15px;
 }
 
-nav ul li a {
+.headerItem a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1rem;
 }
 
-nav ul li a:hover {
-    color: #bbb; /* Cor de destaque ao passar o mouse */
+.headerItem :hover {
+    background-color: #393e46; 
+}
+
+.headerItem a:hover {
+    /* color: #00adb5;  */
+    font-size: 1.5rem;
 }
 
 main {
     padding: 30px 20px;
+    min-height: 100vh;
 }
 
 h1, h2 {
@@ -60,7 +70,6 @@ h1, h2 {
 p {
     font-size: 1rem;
     color: #ccc;
-    margin-bottom: 20px;
 }
 
 /* Seção de serviços */
@@ -81,7 +90,7 @@ ul li a {
 }
 
 ul li a:hover {
-    color: #fff; /* Cor de destaque ao passar o mouse */
+    color: #fff; 
 }
 
 /* Formulário de contato */
@@ -90,8 +99,7 @@ form {
     flex-direction: column;
     max-width: 600px;
     margin: 20px auto;
-    background-color: #444; /* Cor de fundo do formulário */
-    padding: 20px;
+    background-color: #444;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -106,21 +114,21 @@ form input,
 form textarea {
     padding: 10px;
     margin: 5px 0;
-    border: 1px solid #666; /* Borda cinza */
+    border: 1px solid #666; 
     border-radius: 5px;
-    background-color: #555; /* Cor de fundo do campo */
-    color: #fff; /* Cor do texto no campo */
+    background-color: #555;
+    color: #fff; 
 }
 
 form input:focus,
 form textarea:focus {
-    border-color: #bbb; /* Cor da borda ao focar no campo */
+    border-color: #bbb; 
     outline: none;
 }
 
 form button {
     padding: 10px;
-    background-color: #222; /* Cor do botão preta */
+    background-color: #222; 
     color: #fff;
     border: none;
     cursor: pointer;
@@ -130,18 +138,84 @@ form button {
 }
 
 form button:hover {
-    background-color: #444; /* Cor de fundo ao passar o mouse */
+    background-color: #444; 
+}
+
+/* Estilos para os cards */
+.card {
+    background-color: #393e46 !important;
+    border-radius: 20px !important;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    cursor: pointer;
+}
+
+.card-content {
+    
+    color: #dbd8e3;
+    height: 15rem;
+    overflow-y: auto;
+}
+
+.card-content p {    
+    color: #dbd8e3;
+}
+
+.card .card-action:last-child {
+    border-radius: 0 0 20px 20px !important;
+}
+
+.card .card-image img {
+    border-radius: 20px 20px 0 0 !important;
+}
+
+.card-action a {
+    color: #00adb5 !important;
+}
+
+.card-action a:hover {
+    color: #fff !important;
+}
+
+.card .card-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/* Ajustes para o container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Espaçamento entre os cards */
+.row .col {
+    margin-bottom: 20px;
+}
+
+/* Ajuste para imagens dos cards */
+.card .card-image img {
+    height: 160px;
+    object-fit: cover;
 }
 
 /* Footer */
 footer {
-    background-color: #222; /* Cor do rodapé */
+    background-color: #222831; 
     color: #ccc;
-    padding: 10px 0;
-    margin-top: 30px;
 }
 
-/* Responsividade para telas pequenas (como celulares) */
+.footerContent{
+    display: flex;    
+    justify-content: center;
+    padding: 2rem;
+}
+
+/* Responsividade para telas pequenas (celulares) */
 @media (max-width: 768px) {
     header .logo img {
         max-width: 80px;
