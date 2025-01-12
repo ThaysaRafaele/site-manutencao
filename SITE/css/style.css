@@ -1,11 +1,9 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilos globais */
 body {
     font-family: Arial, sans-serif;
     background: rgb(0,255,245);
@@ -65,7 +63,6 @@ main {
 .glass {
     background: rgba(255, 255, 255, 0.55);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(4.9px);
     -webkit-backdrop-filter: blur(2px);
     border: 1px solid rgba(255, 255, 255, 0.24);
@@ -80,15 +77,13 @@ h1, h2 {
 
 p {
     font-size: 2rem;
-    color: #393e46 ;
+    color: #393e46;
 }
 
-/* Seção de serviços */
 ul {
     list-style-type: none;
     padding: 0;
-    color: #393e46 ;
-
+    color: #393e46;
 }
 
 ul li {
@@ -98,15 +93,13 @@ ul li {
 
 ul li a {
     text-decoration: none;
-    color: #393e46 ;
-
+    color: #393e46;
 }
 
 ul li a:hover {
     color: #fff; 
 }
 
-/* Formulário de contato */
 form {
     display: flex;
     flex-direction: column;
@@ -154,7 +147,6 @@ form button:hover {
     background-color: #444; 
 }
 
-/* Estilos para os cards */
 .card {
     background-color: #393e46 !important;
     border-radius: 20px !important;
@@ -168,7 +160,6 @@ form button:hover {
 }
 
 .card-content {
-    
     color: #dbd8e3;
     height: 15rem;
     overflow-y: auto;
@@ -202,20 +193,16 @@ form button:hover {
     font-weight: bold;
 }
 
-/* Ajustes para o container */
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Espaçamento entre os cards */
 .row .col {
     margin-bottom: 20px;
 }
 
-
-/* Footer */
 footer {
     background-color: #222831; 
 }
@@ -231,7 +218,6 @@ footer p {
     padding: 2rem;
 }
 
-/* Animando a imagem de fundo */
 .galaxia {
     position: fixed;
     top: 0;
@@ -273,54 +259,94 @@ footer p {
         transform-origin: top;
     }
 }
-  
 
-/* Responsividade para telas pequenas (celulares) */
-@media (max-width: 768px) {
-    header .logo img {
-        max-width: 80px;
+.nav-wrapper {
+    background-color: #222831 !important;
+    padding: 0 20px;
+}
+
+.sidenav-trigger {
+    display: none !important;
+}
+
+.sidenav {
+    background-color: #222831 !important;
+    padding-top: 20px;
+}
+
+.sidenav li > a {
+    color: #fff !important;
+    font-size: 1.2rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.sidenav .headerItem > a:hover {
+    background-color: #393e46 !important;
+    font-size: 1.4rem !important;
+}
+
+.sidenav-close-btn {
+    padding: 0 !important;
+    margin-bottom: 20px !important;
+}
+
+.sidenav-close-btn a {
+    padding: 0 20px !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+}
+
+.sidenav-close-btn .material-icons {
+    color: #fff !important;
+    font-size: 24px;
+}
+
+.sidenav-close-btn:hover {
+    background-color: transparent !important;
+}
+
+.sidenav li.sidenav-close-btn:hover {
+    background-color: transparent !important;
+}
+
+@media (max-width: 992px) {
+    .sidenav-trigger {
+        display: block !important;
+        color: #fff !important;
     }
 
-    nav ul {
-        flex-direction: column;
+    .hide-on-med-and-down {
+        display: none !important;
+    }
+    
+    .sidenav {
+        width: 250px;
+    }
+    
+    .sidenav li {
+        padding: 0;
     }
 
-    nav ul li {
-        margin-bottom: 10px;
-    }
-
-    main {
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    form {
-        width: 100%;
-        padding: 15px;
-    }
-
-    form label,
-    form input,
-    form textarea,
-    form button {
-        font-size: 1rem;
+    .sidenav li > a {
+        padding: 15px 20px;
+        font-weight: bold;
     }
 }
 
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.6rem;
+@media (max-width: 600px) {
+    .nav-wrapper {
+        padding: 0 10px;
     }
 
-    form input,
-    form textarea {
-        font-size: 0.9rem;
+    .sidenav {
+        width: 200px;
     }
-
-    form button {
-        font-size: 1rem;
+    
+    .sidenav li > a {
+        font-size: 1rem !important;
+    }
+    
+    .sidenav .headerItem > a:hover {
+        font-size: 1.2rem !important;
     }
 }
