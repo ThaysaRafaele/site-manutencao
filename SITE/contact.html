@@ -1,44 +1,107 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato - Manutenção de Computadores</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header>
-        <div class="logo">
-            <img src="images/logo.png" alt="Logo da empresa">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Serviços</a></li>
-                <li><a href="about.html">Sobre nós</a></li>
-                <li><a href="contact.html">Contato</a></li>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Manutenção de Computadores</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Modern+Antiqua&family=Parkinsans:wght@300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Staatliches&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo da empresa">
+            </div>
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <ul class="hide-on-med-and-down">
+                        <li class="headerItem"><a href="index.html">Home</a></li>
+                        <li class="headerItem"><a href="services.html">Serviços</a></li>
+                        <li class="headerItem"><a href="about.html">Sobre nós</a></li>
+                        <li class="headerItem"><a href="contact.html">Contato</a></li>
+                    </ul>
+                </div>
+            </nav>
+            
+            <ul class="sidenav" id="mobile-demo">
+                <li class="sidenav-close-btn">
+                    <a href="#" class="sidenav-close">
+                        <i class="material-icons">close</i>
+                    </a>
+                </li>
+                <li class="headerItem"><a href="index.html">Home</a></li>
+                <li class="headerItem"><a href="services.html">Serviços</a></li>
+                <li class="headerItem"><a href="about.html">Sobre nós</a></li>
+                <li class="headerItem"><a href="contact.html">Contato</a></li>
             </ul>
-        </nav>
-    </header>
+        </header>
 
-    <main>
-        <h1>Entre em contato</h1>
-        <form action="#">
-            <label for="name">Nome:</label>
-            <input type="text" id="name" name="name" required>
+        <main>
+            <img class="galaxia" src="./images/universoazul4.jpg" alt="galaxia">
             
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="message">Mensagem:</label>
-            <textarea id="message" name="message" required></textarea>
-            
-            <button type="submit">Enviar</button>
-        </form>
-    </main>
+            <div class="glass">
+                <section class="intro">
+                    <h1>Entre em contato</h1>
+                </section>
+                <div class="container">
+                    <form class="contact-form">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">account_circle</i>
+                                <input id="name" type="text" class="validate" required>
+                                <label for="name">Nome</label>
+                            </div>
+                        </div>
+                
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">email</i>
+                                <input id="email" type="email" class="validate" required>
+                                <label for="email">E-mail</label>
+                            </div>
+                        </div>
+                
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">message</i>
+                                <textarea id="message" class="materialize-textarea" required></textarea>
+                                <label for="message">Mensagem</label>
+                            </div>
+                        </div>
+                
+                        <div class="row">
+                            <div class="col s12 center-align">
+                                <button class="btn waves-effect waves-light" type="submit">
+                                    Enviar
+                                    <i class="material-icons right">send</i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
 
-    <footer>
-        <p>&copy; 2025 Manutenção de Computadores - Todos os direitos reservados.</p>
-    </footer>
-</body>
+        <footer>
+            <div class="footerContent">
+                <p>&copy; 2025 Manutenção de Computadores - Todos os direitos reservados.</p>
+            </div>
+        </footer>
+    </body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            M.Sidenav.init(elems);
+            
+            var textareas = document.querySelectorAll('.materialize-textarea');
+            M.textareaAutoResize(textareas);
+        });
+        </script>
 </html>
